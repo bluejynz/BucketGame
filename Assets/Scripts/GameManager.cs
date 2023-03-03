@@ -5,14 +5,21 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-  public static GameManager Game {get; private set;}
+  public static GameManager Game { get; private set; }
 
   public float gameWidth = 20f;
 
-  void Awake() {
-    if(Game != null && Game != this) {
+  [HideInInspector]
+  public int points = 0;
+
+  void Awake()
+  {
+    if (Game != null && Game != this)
+    {
       Destroy(this);
-    } else {
+    }
+    else
+    {
       Game = this;
     }
   }
