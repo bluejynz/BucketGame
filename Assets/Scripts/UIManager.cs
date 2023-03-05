@@ -18,13 +18,27 @@ public class UIManager : MonoBehaviour
 
   void Update()
   {
-    if(GameManager.Game.isGameOver) {
+    if(Input.GetKey(KeyCode.Escape)) {
+      Quit();
+    }
+    if (GameManager.Game.isGameOver)
+    {
       highscoreText.GetComponent<TextMeshProUGUI>().text = "Highscore: " + GameManager.Game.highscore;
       gameOverMenu.SetActive(true);
       return;
     }
     pointsText.GetComponent<TextMeshProUGUI>().text = "Points: " + GameManager.Game.points;
     timerText.GetComponent<TextMeshProUGUI>().text = GameManager.Game.time.ToString();
+  }
+
+  public void PlayAgain()
+  {
+    GameManager.Game.PlayAgain();
+    gameOverMenu.SetActive(false);
+  }
+
+  public void Quit() {
+    Application.Quit();
   }
 
 }

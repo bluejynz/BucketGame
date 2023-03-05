@@ -12,12 +12,12 @@ public class GameManager : MonoBehaviour
   [HideInInspector]
   public bool isGameOver = false;
 
-   [HideInInspector]
+  [HideInInspector]
   public int highscore { get; private set; }
 
   [HideInInspector]
   public int points = 0;
-  
+
   [HideInInspector]
   public int time = 60;
 
@@ -35,14 +35,27 @@ public class GameManager : MonoBehaviour
 
   void Update()
   {
-    if(time <= 0) {
+    if (time <= 0)
+    {
       GameOver();
     }
   }
 
-  void GameOver() {
+  void GameOver()
+  {
     isGameOver = true;
-    highscore = points;
+    if (points > highscore)
+    {
+      highscore = points;
+    }
+  }
+
+  public void PlayAgain()
+  {
+    points = 0;
+    time = 60;
+    isGameOver = false;
+    StartCoroutine(TimerManager.Countdown());
   }
 
 }

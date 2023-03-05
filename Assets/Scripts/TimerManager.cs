@@ -13,7 +13,7 @@ public class TimerManager : MonoBehaviour
   {
   }
 
-  IEnumerator Countdown()
+  public static IEnumerator Countdown()
   {
     while (GameManager.Game.time > 0 && !GameManager.Game.isGameOver)
     {
