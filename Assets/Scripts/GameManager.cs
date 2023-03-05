@@ -10,7 +10,16 @@ public class GameManager : MonoBehaviour
   public float gameWidth = 20f;
 
   [HideInInspector]
+  public bool isGameOver = false;
+
+   [HideInInspector]
+  public int highscore { get; private set; }
+
+  [HideInInspector]
   public int points = 0;
+  
+  [HideInInspector]
+  public int time = 60;
 
   void Awake()
   {
@@ -22,6 +31,18 @@ public class GameManager : MonoBehaviour
     {
       Game = this;
     }
+  }
+
+  void Update()
+  {
+    if(time <= 0) {
+      GameOver();
+    }
+  }
+
+  void GameOver() {
+    isGameOver = true;
+    highscore = points;
   }
 
 }

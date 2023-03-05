@@ -26,6 +26,7 @@ public class BallSpawner : MonoBehaviour
   }
 
   void SpawnBall() {
+    if(GameManager.Game.isGameOver) return;
     int prefabIndex = Random.Range(0, balls.Count);
     GameObject prefab = balls[prefabIndex];
     Quaternion rotation = prefab.transform.rotation;

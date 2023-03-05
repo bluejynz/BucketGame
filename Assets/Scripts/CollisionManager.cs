@@ -9,8 +9,8 @@ public class CollisionManager : MonoBehaviour
   {
     if(other.gameObject.CompareTag("Collectables")) {
       
-      // GameManager.Game.points += other.gameObject.GetComponent<Collectable>().points;
       Debug.Log("o outro objeto: " + other.gameObject.name);
+      GameManager.Game.points += other.gameObject.GetComponentInChildren<Collectable>().points;
       Destroy(other.gameObject);
     }
   }
