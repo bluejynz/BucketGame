@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5898679162096456788}
   - component: {fileID: 5898679162096456795}
-  - component: {fileID: 5898679162096456789}
   - component: {fileID: 5898679162096456790}
   - component: {fileID: 5898679162096456791}
   m_Layer: 0
@@ -51,25 +50,6 @@ MonoBehaviour:
   isGameOver: 0
   points: 0
   time: 60
---- !u!114 &5898679162096456789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5898679162096456794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ad34231b92f894687ddc10c84d8b84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balls:
-  - {fileID: 3761925032324632486, guid: d1114c4e1025ad443ba69846599786dd, type: 3}
-  - {fileID: 8874059842515807394, guid: 66ef93ec07961d6429b181dc781262ec, type: 3}
-  - {fileID: 4896910481353830509, guid: c5f6c702902ad964cbb406b84d6efd9a, type: 3}
-  - {fileID: 2054292733852218989, guid: 84bef0bc5a0fad449bba5548fad63178, type: 3}
-  originPoint: {x: 0, y: 15, z: 0}
-  interval: 1
 --- !u!114 &5898679162096456790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +64,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsText: {fileID: 0}
   timerText: {fileID: 0}
+  gameOverMenu: {fileID: 0}
+  highscoreText: {fileID: 0}
 --- !u!114 &5898679162096456791
 MonoBehaviour:
   m_ObjectHideFlags: 0

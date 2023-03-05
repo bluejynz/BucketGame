@@ -9,10 +9,6 @@ public class TimerManager : MonoBehaviour
     StartCoroutine(Countdown());
   }
 
-  void Update()
-  {
-  }
-
   public static IEnumerator Countdown()
   {
     while (GameManager.Game.time > 0 && !GameManager.Game.isGameOver)

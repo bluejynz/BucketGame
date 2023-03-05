@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  void GameOver()
+  public void GameOver()
   {
     isGameOver = true;
     if (points > highscore)
